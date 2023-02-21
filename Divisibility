@@ -1,0 +1,25 @@
+/*
+You are provided an array A of size N that contains non-negative integers. Your task is to determine whether the number that is formed by selecting the last digit 
+of all the N numbers is divisible by 10.
+*/
+
+#include <stdio.h>
+
+int main() {
+    long N, i, data;
+    
+    scanf("%ld", &N);
+    
+    for(i=0; i<N; i++)
+        scanf("%ld", &data); // scan all input data
+
+    // the last input number remains in data
+    
+    if(data % 10 == 0)  // test the last number
+        printf("Yes");
+    else
+        printf("No");
+
+
+    return 0;
+}
