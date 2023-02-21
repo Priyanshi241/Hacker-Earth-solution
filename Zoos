@@ -1,0 +1,29 @@
+/*You are required to enter a word that consists of 
+ and 
+ that denote the number of Zs and Os respectively. The input word is considered similar to word zoo if 
+2*x=y.
+
+Determine if the entered word is similar to word zoo.
+
+For example, words such as zzoooo and zzzoooooo are similar to word zoo but not the words such as zzooo and zzzooooo.*/
+
+#include<string.h>
+#include<stdio.h>
+main()
+{
+	char str[20],z[]="z";
+	int i,count1 = 0,count2 = 0	;
+	gets(str);
+	for(i=0;i<strlen(str);i++)
+	{
+		if(str[i] == z[0])
+		 count1++;
+		else
+		 count2++;
+	}
+	count1=count1*2;
+	if(count1 == count2)
+		printf("Yes");
+	else
+		printf("No");
+}
