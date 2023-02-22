@@ -1,0 +1,23 @@
+/*
+You have been given a String S. 
+You need to find and print whether this string is a palindrome or not. If yes, print "YES" (without quotes), else print "NO" (without quotes).
+*/
+
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+   char str[10];
+   int i,j,flag=0;
+   scanf("%s",&str);
+   j=strlen(str);
+   for(i=0;i<j;i++)
+   {
+	   if(str[i]!=str[j-i-1])
+        flag=1;
+	}
+   if(flag)
+    printf("NO");
+   else
+    printf("YES");	
+}
