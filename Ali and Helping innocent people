@@ -1,0 +1,32 @@
+/*
+Arpasland has surrounded by attackers. A truck enters the city. The driver claims the load is food and medicine from Iranians. 
+Ali is one of the soldiers in Arpasland. He doubts about the truck, maybe it's from the siege.
+He knows that a tag is valid if the sum of every two consecutive digits of it is even and its letter is not a vowel. 
+Determine if the tag of the truck is valid or not.
+We consider the letters "A","E","I","O","U","Y" to be vowels for this problem.
+*/
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int j,i,k,flag=0,flag2=0;
+    char arr[10];
+    scanf("%s",&arr);
+    j=strlen(arr);
+    for(i=0;i<=j;i++)
+    {
+        if(arr[2]=='A'||'E'||'I'||'O'||'U'||'Y')
+            flag=1;
+        if((arr[0]+arr[1])%2==0 && (arr[3]+arr[4])%2==0 && (arr[4]+arr[5])%2==0 &&  (arr[5]+arr[6])%2==0 && (arr[6]+arr[7])%2==0 &&(arr[7]+arr[8])%2==0 && (arr[8]+arr[9])%2==0)
+            flag2=1;
+    }
+    if(flag==1&&flag2==1)
+        printf("valid");
+    else
+        printf("invalid");
+
+    return 0;
+
+}
